@@ -20,7 +20,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   void setupAnimation() {
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 8))
+        AnimationController(vsync: this, duration: Duration(milliseconds: 2000))
           ..stop();
   }
 
@@ -170,7 +170,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 MaterialButton(
                                   onPressed: () {
                                     _controller.repeat(
-                                        period: Duration(seconds: 3));
+                                        period: Duration(milliseconds: 1500));
                                   },
                                   color: Colors.grey[300],
                                   shape: CircleBorder(),
@@ -186,7 +186,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 MaterialButton(
                                   onPressed: () {
                                     _controller.repeat(
-                                        period: Duration(seconds: 2));
+                                        period: Duration(milliseconds: 1000));
                                   },
                                   color: Colors.grey[300],
                                   shape: CircleBorder(),
@@ -202,13 +202,29 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 MaterialButton(
                                   onPressed: () {
                                     _controller.repeat(
-                                        period: Duration(seconds: 1));
+                                        period: Duration(milliseconds: 700));
                                   },
                                   color: Colors.grey[300],
                                   shape: CircleBorder(),
                                   // ignore: prefer_const_constructors
                                   child: Text(
                                     "3",
+                                    // ignore: prefer_const_constructors
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                MaterialButton(
+                                  onPressed: () {
+                                    _controller.repeat(
+                                        period: Duration(milliseconds: 400));
+                                  },
+                                  color: Colors.grey[300],
+                                  shape: CircleBorder(),
+                                  // ignore: prefer_const_constructors
+                                  child: Text(
+                                    "4",
                                     // ignore: prefer_const_constructors
                                     style: TextStyle(
                                         fontSize: 15,
